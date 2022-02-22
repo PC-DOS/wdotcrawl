@@ -617,11 +617,12 @@ class Wikidot:
         for tr in details.find_all('tr'):
             tds = tr.find_all('td')
             if len(tds) < 2: continue
-            if tds[0].getText().strip() == 'Page name:':
+            #if tds[0].getText().strip() == 'Page name:':
+            if tds[0].getText().strip() == '页面名称:': # Modified for Simplified-Chinese
                 unixname = tds[1].getText().strip()
 
         if unixname is None:
-            print('WARNING: Failed to find unixname for ' + str(rev_id))
+            raise Exception('Failed to find unixname for ' + rev_id)
 
         return {
           'rev_id': rev_id,
