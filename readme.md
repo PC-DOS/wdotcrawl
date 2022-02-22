@@ -1,4 +1,4 @@
-*This is a fork to make a permanent backup of a Wikidot site. Forked from [GitHub:Zokhoi/wdotcrawl](https://github.com/Zokhoi/wdotcrawl)*
+*This is a fork to make a permanent backup of a WikiDt site. Forked from [GitHub:Zokhoi/wdotcrawl](https://github.com/Zokhoi/wdotcrawl)*
 
 This is a Python command line client for relatively popular wiki hosting
 http://www.wikidot.com which lets you:
@@ -54,6 +54,17 @@ Someone else did Wikidot AJAX:
 
 * https://github.com/kerel-fs/ogn-rdb/blob/master/wikidotcrawler.py
 
+#### Localization
+
+Some hard-coded strings may change with your WikiDot's language settings.
+
+For example, in `wikidot.py`, function `get_revision_version(self, rev_id`, you can find the following line:
+
+```
+if tds[0].getText().strip() == 'Page name:':
+```
+
+You may need to change the string `Page name:` to what it should be under your WikiDot's UI language. If your default language is Simplified Chinese, you should change it to `页面名称:`.
 
 #### TODO
 
