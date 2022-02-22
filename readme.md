@@ -1,4 +1,4 @@
-*This is a fork to make a permanent backup of the SCP wiki.*
+*This is a fork to make a permanent backup of a Wikidot site. Forked from [GitHub:Zokhoi/wdotcrawl](https://github.com/Zokhoi/wdotcrawl)*
 
 This is a Python command line client for relatively popular wiki hosting
 http://www.wikidot.com which lets you:
@@ -16,14 +16,22 @@ Most interestingly, it allows you to download the whole site as a Git repository
 At least:
 
 * Python 3
+* Git executable
 * python-beautifulsoup4
 * python-gitpython
 * python-requests
 * python-tqdm
 
+```
+pip install bs4
+pip install gitpython
+pip install requests
+pip install tqdm
+```
+
 ##### Examples:
 
-    crawl.py http://example.wikidot.com --dump ExampleRepo
+    crawl.py http://example.wikidot.com --dump ExampleRepo --category "*"
     crawl.py http://example.wikidot.com --log --page example-page
 
 It uses internal Wikidot AJAX requests to do its job. If you're from Wikidot, please don't break it. Thank you! We'll try to be nice and not put a load on your servers.
