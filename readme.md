@@ -15,12 +15,14 @@ Most interestingly, it allows you to download the whole site as a Git repository
 
 At least:
 
-* Python 3
-* Git executable
+* Python 3, added to `Path` variable
+* Git executable, added to `Path` variable
 * python-beautifulsoup4
 * python-gitpython
 * python-requests
 * python-tqdm
+
+You can easily install dependencies (Python3 & Git should be installed manually) using the following commands:
 
 ```
 pip install bs4
