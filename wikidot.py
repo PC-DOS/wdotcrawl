@@ -621,7 +621,7 @@ class Wikidot:
                 unixname = tds[1].getText().strip()
 
         if unixname is None:
-            raise Exception('Failed to find unixname for ' + rev_id)
+            print('WARNING: Failed to find unixname for ' + str(rev_id))
 
         return {
           'rev_id': rev_id,
