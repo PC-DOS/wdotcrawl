@@ -64,7 +64,11 @@ For example, in `wikidot.py`, function `get_revision_version(self, rev_id`, you 
 if tds[0].getText().strip() == 'Page name:':
 ```
 
-You may need to change the string `Page name:` to what it should be under your WikiDot's UI language. If your default language is Simplified Chinese, you should change it to `页面名称:`.
+You may need to change the string `Page name:` to what it should be under your WikiDot's UI language. If your default language is Simplified Chinese, you should change it to `页面名称:`. Like this:
+
+```
+if tds[0].getText().strip() == '页面名称:':
+```
 
 #### TODO
 
